@@ -1,0 +1,40 @@
+{
+	"apiVersion": 2,
+	"name": "blocks-course/team-slider",
+	"title": "Team Slider",
+	"category": "widgets",
+	"icon": "admin-users",
+	"description": "Display Team Slider.",
+	"keywords": ["slider", "team"],
+	"supports": {
+		"html": false
+	},
+	"textdomain": "team-slider",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css",
+	"attributes": {
+		"numberOfPosts": {
+			"type": "number",
+			"default": 6
+		},
+		"order": {
+			"type": "string",
+			"default": "desc"
+		},
+		"selectedMembers" : {
+			"type" : "array",
+			"default": []
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

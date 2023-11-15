@@ -1,0 +1,52 @@
+{
+	"name": "boilerplate",
+	"version": "0.1.0",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"build:custom": "wp-scripts build index.js view.js --output-path=build",
+		"format": "wp-scripts format && stylelint \"**/*.scss\" --fix",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"start": "wp-scripts start",
+		"packages-update": "wp-scripts packages-update",
+		"prepare": "husky install"
+	},
+	"prettier": "@wordpress/prettier-config",
+	"stylelint": {
+		"extends": "@wordpress/stylelint-config/scss"
+	},
+	"lint-staged": {
+		"*.js": [
+			"wp-scripts lint-js",
+			"wp-scripts format"
+		],
+		"*.scss": "npx stylelint --fix"
+	},
+	"dependencies": {
+		"@wordpress/block-editor": "^8.0.11",
+		"@wordpress/blocks": "^11.1.4",
+		"@wordpress/components": "^25.11.0",
+		"@wordpress/data": "^9.15.0",
+		"@wordpress/element": "^5.22.0",
+		"@wordpress/i18n": "^4.2.4"
+	},
+	"devDependencies": {
+		"@wordpress/babel-preset-default": "^7.29.0",
+		"@wordpress/core-data": "^6.22.0",
+		"@wordpress/edit-post": "^7.22.0",
+		"@wordpress/eslint-plugin": "^9.3.0",
+		"@wordpress/icons": "^9.36.0",
+		"@wordpress/plugins": "^6.13.0",
+		"@wordpress/prettier-config": "^1.1.1",
+		"@wordpress/scripts": "^26.16.0",
+		"@wordpress/stylelint-config": "^21.28.0",
+		"eslint-config-prettier": "^8.3.0",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.1.3",
+		"swiper": "^11.0.4"
+	}
+}
